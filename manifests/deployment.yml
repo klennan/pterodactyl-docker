@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kl8s-b239"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kl8s-b239"
+    spec:
+      containers:
+        - name: "kl8s-b239"
+          image: "ptero.azurecr.io/kl8s"
+          ports:
+          - containerPort: 8080
